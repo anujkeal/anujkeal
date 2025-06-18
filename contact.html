@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Anuj Keal</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .thank-you-popup {
+      display: none;
+      position: fixed;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #222;
+      color: #fff;
+      padding: 20px 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+      z-index: 9999;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Anuj Keal</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="artwork.html">Artwork</a>
+      <a href="poetry.html">Poetry</a>
+      <a href="writings.html">Writings</a>
+      <a href="upcoming.html">Upcoming</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="contact-section">
+    <h1>Contact Me</h1>
+    <p>Have a question, proposal, or just want to connect? Fill out the form below.</p>
+
+    <form class="contact-form" id="contactForm">
+      <label>Name</label>
+      <input type="text" name="name" placeholder="Your Name" required />
+
+      <label>Email</label>
+      <input type="email" name="email" placeholder="your.email@example.com" required />
+
+      <label>Subject</label>
+      <input type="text" name="subject" placeholder="Regarding..." required />
+
+      <label>Message</label>
+      <textarea name="message" placeholder="Your message here..." rows="5" required></textarea>
+
+      <button type="submit" class="animated-button">Send Message</button>
+    </form>
+  </section>
+
+  <div class="thank-you-popup" id="popup">
+    Thank you for submitting the form!
+  </div>
+
+  <footer>
+    &copy; 2025 Anuj Keal. All rights reserved.
+    <div class="socials">
+      <a href="https://www.linkedin.com/in/anujkeal/?originalSubdomain=in">
+        <img src="imge/linkedin.png" alt="LinkedIn" />
+      </a>
+      <a href="https://www.instagram.com/anujkeal/">
+        <img src="imge/insta.png" alt="Instagram" />
+      </a>
+      <a href="https://www.youtube.com/@kealart">
+        <img src="imge/youtube.png" alt="YouTube" />
+      </a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      // OPTIONAL: Send using FormSubmit (but skip redirect)
+      fetch("https://formsubmit.co/ajax/anujkr47471@gmail.com", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: this.name.value,
+          email: this.email.value,
+          subject: this.subject.value,
+          message: this.message.value,
+        }),
+      });
+
+      // Show the thank-you popup
+      const popup = document.getElementById("popup");
+      popup.style.display = "block";
+
+      // Hide after 3 seconds
+      setTimeout(() => {
+        popup.style.display = "none";
+      }, 3000);
+
+      // Reset form
+      this.reset();
+    });
+  </script>
+</body>
+</html>
