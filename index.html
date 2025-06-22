@@ -9,16 +9,24 @@
 </head>
 <body>
   <header>
-    <div class="logo">Anuj Keal</div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="artwork.html">Artwork</a>
-      <a href="poetry.html">Poetry</a>
-      <a href="writings.html">Writings</a>
-      <a href="upcoming.html">Upcoming</a>
-      <a href="contact.html">contact</a>
-    </nav>
-  </header>
+  <div class="logo">Anuj Keal</div>
+  <div class="menu-icon" onclick="toggleMenu()">⋮</div>
+  <nav id="dropdownMenu" class="hidden">
+    <a href="index.html">Home</a>
+    <a href="artwork.html">Artwork</a>
+    <a href="poetry.html">Poetry</a>
+    <a href="writings.html">Writings</a>
+    <a href="upcoming.html">Upcoming</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById("dropdownMenu");
+    menu.classList.toggle("hidden");
+  }
+</script>
+
   </video>
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>

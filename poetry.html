@@ -2,54 +2,59 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Writings & Philosophy | Anuj Keal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Poetry | Anuj Keal</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
 </head>
 <body>
   <header>
-    <div class="logo">Anuj Keal</div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="artwork.html">Artwork</a>
-      <a href="poetry.html">Poetry</a>
-      <a href="writings.html">Writings</a>
-      <a href="upcoming.html">Upcoming</a>
-      <a href="contact.html">contact</a>
-    </nav>
-  </header>
+  <div class="logo">Anuj Keal</div>
+  <div class="menu-icon" onclick="toggleMenu()">⋮</div>
+  <nav id="dropdownMenu" class="hidden">
+    <a href="index.html">Home</a>
+    <a href="artwork.html">Artwork</a>
+    <a href="poetry.html">Poetry</a>
+    <a href="writings.html">Writings</a>
+    <a href="upcoming.html">Upcoming</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById("dropdownMenu");
+    menu.classList.toggle("hidden");
+  }
+</script>
 
-  <main>
-    <section class="writings-intro">
-      <h1>Writings & Philosophy</h1>
-      <p>
-        Delve into essays and philosophical inquiries exploring the themes central to Anuj Keal’s work: truth, ego, beauty, and the human experience.
-      </p>
-    </section>
+  <main class="poetry-content">
+    <h1>Poetry Collection</h1>
+    <p class="subtitle">Explore reflections on life, introspection, and the search for meaning through the medium of verse.</p>
 
-    <section class="writing-list">
-      <div class="writing-card">
-        <h2>The Layered Love Theory</h2>
-        <p>Love is not a sudden spark; it’s a slow unfolding. It grows through shared stories, honesty, and quiet acceptance.</p>
+    <div class="poem-list">
+      <div class="poem-card">
+        <h2>Whispers of the Void</h2>
+        <p><em>In silence deep, where thoughts reside, A universe begins to bloom inside...</em></p>
       </div>
-
-      <div class="writing-card">
-        <h2>The Middle Path of Knowing</h2>
-        <p>I am neither a believer nor an atheist—I choose curiosity. Truth lives beyond sides, in the space between certainty and doubt.</p>
+      <div class="poem-card">
+        <h2>The Mirror's Gaze</h2>
+        <p><em>Reflections shift, a face unknown, The ego masks, subtly shown...</em></p>
       </div>
-
-      <div class="writing-card">
-        <h2>The Layered Reality View</h2>
-        <p>I don’t see the world in right or wrong—I see in layers. Understanding comes not from answers, but from depth.</p>
+      <div class="poem-card">
+        <h2>Golden Thread</h2>
+        <p><em>Through tangled paths, a light appears, Connecting souls, dispelling fears...</em></p>
       </div>
-
-      <div class="writing-card">
-        <h2>The Philosophy of Honest Confusion</h2>
-        <p>Confusion is not weakness; it is the doorway to wisdom. Only those who dare to not know, will truly begin to understand.</p>
+      <div class="poem-card">
+        <h2>Ephemeral Beauty</h2>
+        <p><em>A fleeting glance, a moment caught, The transient nature, dearly bought...</em></p>
       </div>
-    </section>
+      <div class="poem-card">
+        <h2>Confessions Unbound</h2>
+        <p><em>Truth spills forth, a river flows, From hidden depths, the spirit grows...</em></p>
+      </div>
+    </div>
   </main>
-  
+
   <footer>
     &copy; 2025 Anuj Keal. All rights reserved.
     <div class="socials">
